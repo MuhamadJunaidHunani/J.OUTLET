@@ -1,0 +1,166 @@
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+.main-div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-hd {
+    font-size: 100px;
+    position: relative;
+    color: white;
+    margin: 0px;
+    cursor: move;
+}
+
+.logo-hd::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 7px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+}
+
+.logo-hd:hover::after {
+    animation-name: hoveranimation;
+    animation-duration: 0.7s;
+    animation-iteration-count: 2;
+
+
+}
+
+@keyframes hoveranimation {
+    0% {
+        width: 0px;
+        left: 0;
+    }
+
+    60% {
+        width: 500px;
+        left: 0;
+    }
+
+    100% {
+        width: 0px;
+        left: 100%;
+    }
+}
+
+.nav-bar {
+    width: 95%;
+    height: 60px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+}
+
+.nav-bar-links {
+    color: white;
+}
+
+.nav-bar-links:hover {
+    color: rgba(255, 255, 255, 0.811);
+    cursor: pointer;
+}
+
+
+
+
+
+@keyframes bar {
+    0% {
+        left: auto;
+        bottom: -100px;
+    }
+    100% {
+        left: auto;
+        bottom: 0%;
+    }
+}
+
+.kurta-container {
+    height: 250px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    overflow-x: auto;
+}
+.kurta-container::-webkit-scrollbar{
+    height: 10px;
+}
+#kurtas{
+    min-width: 180px;
+    height: 230px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+    border-radius: 4px;
+}
+.kurta-1 {
+    background-image: url("images/j.1.jpg");
+}
+.kurta-2 {
+    background-image: url("images/j.2.jpg");
+}
+.kurta-3 {
+    background-image: url("images/j.3.jpg");
+}
+.kurta-4 {
+    background-image: url("images/j.5.jpg");
+}
+.kurta-5 {
+    background-image: url("images/j.1.jpg");
+}
+.kurta-6 {
+    background-image: url("images/j.2.jpg");
+}
+.kurta-7 {
+    background-image: url("images/j.3.jpg");
+}
+.kurta-8 {
+    background-image: url("images/j.4.jpg");
+}
+.kurta-9 {
+    background-image: url("images/j.1.jpg");
+}
+.kurta-10 {
+    background-image: url("images/j.5.jpg");
+}
+
+
+
+
+.side-bar {
+    width: 500px;
+    height: 60px;
+    background-color:rgba(245, 245, 245, 0.915);
+    color: black;
+    animation-duration: 1s;
+    animation-name: bar;
+    position: absolute;
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 1px 2px white;
+    animation-fill-mode: forwards;
+    position: fixed;
+}
+#bar-icons:hover{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+}
